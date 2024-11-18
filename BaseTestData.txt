@@ -1,0 +1,32 @@
+INSERT INTO `worker` (`Id`, `Name`, `Surname`) VALUES (NULL, 'Эльза', 'Бикмухаметова');
+
+INSERT INTO `service` (`Id`, `Name`, `Description`) VALUES (NULL, 'Наращивание ногтей', 'Удлиняем ваши ногти с помощью полигеля');
+
+INSERT INTO `time` (`Id`, `DayOfTheWeek`, `Time`, `Worker`) VALUES (NULL, '1', '14:23:59', '1');
+
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '1', '1');
+
+INSERT INTO `appoint` (`Id`, `Worker`, `Service`, `Time`, `Date`, `Name`, `Surname`) VALUES (NULL, '1', '1', '1', '2024-09-18', 'Динис', 'Мустафин');
+
+
+INSERT INTO `worker` (`Id`, `Name`, `Surname`) VALUES (NULL, 'Анна', 'Сидорова');
+INSERT INTO `worker` (`Id`, `Name`, `Surname`) VALUES (NULL, 'Игорь', 'Кузнецов');
+INSERT INTO `worker` (`Id`, `Name`, `Surname`) VALUES (NULL, 'Мария', 'Петрова');
+
+INSERT INTO `service` (`Id`, `Name`, `Description`) VALUES (NULL, 'Стрижка', 'Классическая стрижка для любой длины волос');
+INSERT INTO `service` (`Id`, `Name`, `Description`) VALUES (NULL, 'Укладка', 'Элегантная укладка для особых случаев');
+INSERT INTO `service` (`Id`, `Name`, `Description`) VALUES (NULL, 'Окрашивание', 'Профессиональная окраска волос с использованием качественных красок');
+
+INSERT INTO `time` (`Id`, `DayOfTheWeek`, `Time`, `Worker`) VALUES (NULL, '2', '10:00:00', '1');
+INSERT INTO `time` (`Id`, `DayOfTheWeek`, `Time`, `Worker`) VALUES (NULL, '3', '11:30:00', '2');
+INSERT INTO `time` (`Id`, `DayOfTheWeek`, `Time`, `Worker`) VALUES (NULL, '4', '09:15:00', '3');
+
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '1', '1');
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '1', '2');
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '2', '3');
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '3', '1');
+INSERT INTO `service_worker` (`Id`, `Worker`, `Service`) VALUES (NULL, '3', '2');
+
+INSERT INTO `appoint` (`Id`, `Worker`, `Service`, `Time`, `Date`, `Name`, `Surname`) VALUES (NULL, '1', '1', '1', '2024-09-20', 'Елена', 'Никифорова');
+INSERT INTO `appoint` (`Id`, `Worker`, `Service`, `Time`, `Date`, `Name`, `Surname`) VALUES (NULL, '2', '3', '2', '2024-09-21', 'Сергей', 'Дмитриев');
+INSERT INTO `appoint` (`Id`, `Worker`, `Service`, `Time`, `Date`, `Name`, `Surname`) VALUES (NULL, '3', '2', '3', '2024-09-22', 'Анастасия', 'Фролова');

@@ -1,0 +1,36 @@
+CREATE TABLE Service(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(20) NOT NULL,
+    Description VARCHAR(200) NULL
+);
+CREATE TABLE Worker(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(20) NOT NULL,
+    Surname VARCHAR(20) NOT NULL
+);
+CREATE TABLE Time(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    DayOfTheWeek INT NOT NULL,
+    Time Time NOT NULL,
+    Worker INT NOT NULL,
+    FOREIGN KEY (Worker)  REFERENCES Worker (Id)
+);
+CREATE TABLE Service_Worker(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+ 	Worker INT NOT NULL,
+    Service INT NOT NULL,
+ 	FOREIGN KEY (Worker)  REFERENCES Worker (Id),
+    FOREIGN KEY (Service) REFERENCES Service (Id)
+);
+CREATE TABLE Appoint(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+    Worker INT NOT NULL,
+    Service INT NOT NULL,
+    Time INT NOT NULL,
+    Date Date NOT NULL,
+    Name varchar(20) Not Null,
+    Surname varchar(20) Not Null,
+    FOREIGN KEY (Worker)  REFERENCES Worker (Id),
+    FOREIGN KEY (Service) REFERENCES Service (Id),
+    FOREIGN Key (Time) REFERENCES Time (Id)
+);
